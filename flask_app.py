@@ -17,7 +17,7 @@ def get_gamelist():
     
     try:
         # On effectue l'appel à l'API MMOBomb
-        response = requests.get(api_url, timeout=10)
+        response = request.get(api_url, timeout=10)
         
         if response.status_code == 200:
             data = response.json()
