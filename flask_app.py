@@ -22,7 +22,7 @@ def get_gamelist():
         if response.status_code == 200:
             data = response.json()
             # On envoie les données au fichier consignes.html
-            return render_template('consignes.html', games=data)
+            return render_template('gamelist.html', games=data)
         else:
             return f"Erreur lors de l'appel API : {response.status_code}", response.status_code
             
