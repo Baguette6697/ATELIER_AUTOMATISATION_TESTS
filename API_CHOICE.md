@@ -1,13 +1,13 @@
 # API Choice
 
 - Étudiant : Clement BOUVERET
-- API choisie : Aviationstack
-- URL base : [https://api.quotable.io/random ](https://aviationstack.com/)
+- API choisie : MMO BOMB
+- URL base : [https://api.mcsrvstat.us/](https://www.mmobomb.com/api)
 - Documentation officielle / README : https://docs.apilayer.com/aviationstack/docs/api-documentation?utm_source=dashboard&utm_medium=Referral
-- Auth : None / 8efc4ba3216ac78986151e9bc1866471 / OAuth
+- Auth : None 
 - Endpoints testés :
-  - GET ...
-  - GET ...
-- Hypothèses de contrat (champs attendus, types, codes) :
+  - GET https://www.mmobomb.com/api1/games 
+  - GET https://www.mmobomb.com/api1/games?sort-by=release-date
+- Hypothèses de contrat (champs attendus, types, codes) : tableau de donnees
 - Limites / rate limiting connu :
 - Risques (instabilité, downtime, CORS, etc.) :
