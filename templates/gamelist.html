@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Jeux - TP</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .game-card { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+        img { max-width: 200px; display: block; }
+    </style>
+</head>
+<body>
+    <h1>Jeux récupérés via l'API MMOBomb</h1>
+    <a href="/">Retour à l'accueil</a>
+    <hr>
+
+    {% if games %}
+        {% for game in games %}
+            <div class="game-card">
+                <h3>{{ game.title }}</h3>
+                <p><strong>Genre :</strong> {{ game.genre }}</p>
+                <p><strong>Plateforme :</strong> {{ game.platform }}</p>
+                <p><strong>Date de sortie :</strong> {{ game.release_date }}</p>
+                <small>{{ game.short_description }}</small>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Aucun jeu trouvé ou erreur de chargement.</p>
+    {% endif %}
+</body>
+</html>
