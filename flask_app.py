@@ -26,7 +26,7 @@ def get_gamelist():
         else:
             return f"Erreur lors de l'appel API : {response.status_code}", response.status_code
             
-    except requests.exceptions.RequestException as e:
+    except request.exceptions.RequestException as e:
         return f"Erreur de connexion : {str(e)}", 500
 
 
