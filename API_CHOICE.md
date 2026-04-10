@@ -1,9 +1,9 @@
 # API Choice
 
-- Étudiant :
-- API choisie :
-- URL base :
-- Documentation officielle / README :
+- Étudiant : Clement BOUVERET
+- API choisie : https://api.quotable.io/random
+- URL base : https://api.quotable.io/random 
+- Documentation officielle / README : 
 - Auth : None / API Key / OAuth
 - Endpoints testés :
   - GET ...
