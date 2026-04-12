@@ -4,6 +4,7 @@ from flask import json
 from urllib.request import urlopen
 from werkzeug.utils import secure_filename
 import sqlite3
+import requests
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def get_gamelist():
     api_url = "https://www.mmobomb.com/api1/games?sort-by=release-date"
     
     try:
-        # Use requests.get instead of request.get
+        # Use requests.get (with an 's') instead of request.get
         response = requests.get(api_url, timeout=10)
         
         if response.status_code == 200:
@@ -25,7 +26,7 @@ def get_gamelist():
         else:
             return f"Erreur lors de l'appel API : {response.status_code}", response.status_code
             
-    except requests.exceptions.RequestException as e: # Updated exception path
+    except requests.exceptions.RequestException as e: # Catch the right exception
         return f"Erreur de connexion : {str(e)}", 500
 
 
