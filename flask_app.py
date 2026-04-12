@@ -16,17 +16,16 @@ def get_gamelist():
     api_url = "https://www.mmobomb.com/api1/games?sort-by=release-date"
     
     try:
-        # On effectue l'appel à l'API MMOBomb
-        response = request.get(api_url, timeout=10)
+        # Use requests.get instead of request.get
+        response = requests.get(api_url, timeout=10)
         
         if response.status_code == 200:
             data = response.json()
-            # On envoie les données au fichier consignes.html
             return render_template('gamelist.html', games=data)
         else:
             return f"Erreur lors de l'appel API : {response.status_code}", response.status_code
             
-    except request.exceptions.RequestException as e:
+    except requests.exceptions.RequestException as e: # Updated exception path
         return f"Erreur de connexion : {str(e)}", 500
 
 
